@@ -17,8 +17,21 @@ const LoginScreen = () => {
       <StatusBar barStyle="light-content" />
       <Image
         className="absolute w-full h-full"
-        source={require('../../assets/images/three.jpg')}
+        source={require('../../assets/images/background.png')}
       />
+
+      <View className="absolute flex-row justify-around w-full">
+        <Animated.Image
+          entering={FadeInUp.duration(1000).springify()}
+          className="h-[225] w-[90]"
+          source={require('../../assets/images/light.png')}
+        />
+        <Animated.Image
+          entering={FadeInUp.duration(1000).springify()}
+          className="h-[160] w-[65]"
+          source={require('../../assets/images/light.png')}
+        />
+      </View>
 
       <View className="flex justify-around w-full h-full pt-40 pb-10">
         <View className="flex items-center">
